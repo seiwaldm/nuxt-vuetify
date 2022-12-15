@@ -1,6 +1,6 @@
 <template>
   <div>
-    Hello Layout!
+    <LayoutHeader />
     <slot></slot>
   </div>
 </template>
