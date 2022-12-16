@@ -1,3 +1,16 @@
+<script setup>
+useHead({
+  script: [
+    {
+      async: true,
+      crossorigin: "anonymous",
+      type: "module",
+      src: "https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js",
+    },
+  ],
+});
+</script>
+
 <template>
   <v-app>
     <NuxtLayout> <NuxtPage /> </NuxtLayout>

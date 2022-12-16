@@ -1,5 +1,17 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+import { Camera, CameraResultType } from "@capacitor/camera";
+const imageUrl = ref(null);
+
+async function takePic() {
+  const image = await Camera.getPhoto({
+    quality: 90,
+    allowEditing: true,
+    resultType: CameraResultType.Uri,
+  });
+
+  imageUrl.value = image.webPath;
+}
 </script>
 
 <template>
@@ -17,6 +29,10 @@ import { Icon } from "@iconify/vue";
         <v-btn color="success" variant="outlined">Success</v-btn>
         <v-btn color="info" variant="outlined">Info</v-btn>
       </div>
+      <v-btn @click="takePic"
+        ><Icon text-6 icon="material-symbols:photo-camera-rounded"
+      /></v-btn>
+      <img :src="imageUrl" max-w="100%" />
     </v-container>
   </v-main>
 </template>
