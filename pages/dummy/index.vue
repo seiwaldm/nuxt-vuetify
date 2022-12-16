@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-main>
     <h1>Hello Dummy!</h1>
-  </v-container>
+  </v-main>
 </template>

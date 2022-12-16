@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   modules: ["@unocss/nuxt"],
   app: { pageTransition: { name: "page", mode: "out-in" } },
   css: ["vuetify/lib/styles/main.sass"],
+  ssr: false,
   build: {
     transpile: ["vuetify"],
   },
