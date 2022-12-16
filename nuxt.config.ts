@@ -20,6 +20,10 @@ export default defineNuxtConfig({
 
     // core options
     shortcuts: [],
-    rules: [],
+    rules: [
+      ["text-red", { color: "#E4003A" }],
+      ["text-orange", { color: "#F7A823" }],
+      ["text-blue", { color: "#005577" }],
+    ],
   },
 });
