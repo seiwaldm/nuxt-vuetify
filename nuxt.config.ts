@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@unocss/nuxt"],
+  modules: ["@unocss/nuxt", "@kevinmarrec/nuxt-pwa"],
   app: { pageTransition: { name: "page", mode: "out-in" } },
   css: ["vuetify/lib/styles/main.sass"],
   ssr: false,
@@ -25,5 +25,10 @@ export default defineNuxtConfig({
       ["text-orange", { color: "#F7A823" }],
       ["text-blue", { color: "#005577" }],
     ],
+  },
+  pwa: {
+    workbox: {
+      enabled: true,
+    },
   },
 });
