@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   ],
   app: { pageTransition: { name: "page", mode: "out-in" } },
   css: ["vuetify/lib/styles/main.sass"],
-  ssr: false,
   build: {
     transpile: ["vuetify"],
   },
@@ -34,6 +33,9 @@ export default defineNuxtConfig({
   pwa: {
     workbox: {
       enabled: true,
+    },
+    icon: {
+      sizes: [64, 120, 144, 152, 192, 384, 512],
     },
   },
   piniaPersistedstate: {

@@ -27,7 +27,7 @@ async function takePic() {
   <v-main>
     <v-container flex flex-col items-center gap-4>
       <h1 b-1 text-red w="200px" text-center>Hello {{ name }}</h1>
-      <div flex gap-2 min-w="400px" items-center>
+      <div flex gap-2 w="400px" max-w="100%" items-center>
         <v-text-field
           label="Tell me your name"
           v-model="newName"
