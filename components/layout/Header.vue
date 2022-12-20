@@ -32,6 +32,7 @@ function toggleTheme() {
       <Icon icon="logos:nuxt-icon" />
       <Icon icon="logos:vuetifyjs" />
       <Icon icon="logos:unocss" />
+      <Icon icon="logos:tailwindcss-icon" />
       <Icon icon="line-md:iconify1" />
       <Icon icon="logos:capacitorjs-icon" />
       <Icon
