@@ -26,6 +26,7 @@ async function takePic() {
 <template>
   <v-main>
     <v-container flex flex-col items-center gap-4>
+      <v-breadcrumbs :items="['path', 'to', 'html-page']"></v-breadcrumbs>
       <h1 b-1 text-red w="200px" text-center>Hello {{ name }}</h1>
       <div flex gap-2 w="400px" max-w="100%" items-center>
         <v-text-field
@@ -49,6 +50,20 @@ async function takePic() {
         ><Icon text-6 icon="material-symbols:photo-camera-rounded"
       /></v-btn>
       <img :src="imageUrl" max-w="100%" />
+      <v-card>
+        <v-card-title>v-card-title</v-card-title>
+        <v-card-subtitle>v-card-subtitle</v-card-subtitle>
+        <v-card-text>
+          <span>&lt;v-card-text </span>
+          <span text-red>text-red </span>
+          <span text-blue>text-blue </span>
+          <span text-orange>text-orange</span>&gt;
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="primary">Primary-Button</v-btn>
+          <v-btn color="secondary">Secondary-Button</v-btn>
+        </v-card-actions>
+      </v-card>
     </v-container>
   </v-main>
 </template>
