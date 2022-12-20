@@ -15,6 +15,7 @@ specifiers:
   '@pinia-plugin-persistedstate/nuxt': ^1.0.0
   '@pinia/nuxt': ^0.4.6
   '@unocss/nuxt': ^0.47.6
+  '@unocss/preset-wind': ^0.47.6
   nuxt: 3.0.0
   pinia: ^2.0.28
   sass: ^1.56.2
@@ -46,6 +47,7 @@ devDependencies:
   '@kevinmarrec/nuxt-pwa': 0.13.0
   '@pinia-plugin-persistedstate/nuxt': 1.0.0_7ny4l52hk6bzcklmx3evm5f2c4
   '@unocss/nuxt': 0.47.6_vite@4.0.1+webpack@5.75.0
+  '@unocss/preset-wind': 0.47.6
   nuxt: 3.0.0_sass@1.56.2
 
 packages:
