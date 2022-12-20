@@ -3,8 +3,10 @@ import { Icon } from "@iconify/vue";
 import { Camera, CameraResultType } from "@capacitor/camera";
 import { useStore } from "~/store/store";
 import { storeToRefs } from "pinia";
+import { useRoute } from "vue-router";
 
 const store = useStore();
+const route = useRoute();
 const name = storeToRefs(store).name;
 const newName = ref("");
 function setName() {
@@ -24,48 +26,45 @@ async function takePic() {
 </script>
 
 <template>
-  <v-main>
-    <v-container flex flex-col items-center gap-4>
-      <v-breadcrumbs :items="['path', 'to', 'html-page']"></v-breadcrumbs>
-      <h1 b-1 text-red w="200px" text-center>Hello {{ name }}</h1>
-      <div flex gap-2 w="400px" max-w="100%" items-center>
-        <v-text-field
-          label="Tell me your name"
-          v-model="newName"
-          @keyup.enter="setName"
-        ></v-text-field>
-        <v-btn @click="setName">Set Name</v-btn>
-      </div>
-      <div flex flex-wrap justify-center gap-4>
-        <v-btn> Button </v-btn>
-        <v-btn color="primary">Primary</v-btn>
-        <v-btn color="secondary">Secondary</v-btn>
-        <v-btn color="accent">Accent</v-btn>
-        <v-btn color="warning" variant="outlined">Warning</v-btn>
-        <v-btn color="error" variant="outlined">Error</v-btn>
-        <v-btn color="success" variant="outlined">Success</v-btn>
-        <v-btn color="info" variant="outlined">Info</v-btn>
-      </div>
-      <v-btn @click="takePic"
-        ><Icon text-6 icon="material-symbols:photo-camera-rounded"
-      /></v-btn>
-      <img :src="imageUrl" max-w="100%" />
-      <v-card>
-        <v-card-title>v-card-title</v-card-title>
-        <v-card-subtitle>v-card-subtitle</v-card-subtitle>
-        <v-card-text>
-          <span>&lt;v-card-text </span>
-          <span text-red>text-red </span>
-          <span text-blue>text-blue </span>
-          <span text-orange>text-orange</span>&gt;
-        </v-card-text>
-        <v-card-actions>
-          <v-btn color="primary">Primary-Button</v-btn>
-          <v-btn color="secondary">Secondary-Button</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-container>
-  </v-main>
+  <v-container flex flex-col items-center gap-4>
+    <h1 b-1 text-red p-4>Hello {{ name }}</h1>
+    <div flex gap-2 w="400px" max-w="100%" items-center>
+      <v-text-field
+        label="Tell me your name"
+        v-model="newName"
+        @keyup.enter="setName"
+      ></v-text-field>
+      <v-btn @click="setName">Set Name</v-btn>
+    </div>
+    <div flex flex-wrap justify-center gap-4>
+      <v-btn> Button </v-btn>
+      <v-btn color="primary">Primary</v-btn>
+      <v-btn color="secondary">Secondary</v-btn>
+      <v-btn color="accent">Accent</v-btn>
+      <v-btn color="warning" variant="outlined">Warning</v-btn>
+      <v-btn color="error" variant="outlined">Error</v-btn>
+      <v-btn color="success" variant="outlined">Success</v-btn>
+      <v-btn color="info" variant="outlined">Info</v-btn>
+    </div>
+    <v-btn @click="takePic"
+      ><Icon text-6 icon="material-symbols:photo-camera-rounded"
+    /></v-btn>
+    <img :src="imageUrl" max-w="100%" />
+    <v-card>
+      <v-card-title>v-card-title</v-card-title>
+      <v-card-subtitle>v-card-subtitle</v-card-subtitle>
+      <v-card-text>
+        <span>&lt;v-card-text </span>
+        <span text-red>text-red </span>
+        <span text-blue>text-blue </span>
+        <span text-orange>text-orange</span>&gt;
+      </v-card-text>
+      <v-card-actions>
+        <v-btn color="primary">Primary-Button</v-btn>
+        <v-btn color="secondary">Secondary-Button</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-container>
 </template>
 
 <style>

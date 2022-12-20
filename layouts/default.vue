@@ -1,6 +1,9 @@
 <template>
   <div>
-    <LayoutHeader />
-    <slot></slot>
+    <UiHeader />
+    <v-main>
+      <UiBreadcrumbs />
+      <slot></slot
+    ></v-main>
   </div>
 </template>
