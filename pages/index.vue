@@ -3,10 +3,9 @@ import { Icon } from "@iconify/vue";
 import { Camera, CameraResultType } from "@capacitor/camera";
 import { useStore } from "~/store/store";
 import { storeToRefs } from "pinia";
-import { useRoute } from "vue-router";
 
+// useStore() and name handling:
 const store = useStore();
-const route = useRoute();
 const name = storeToRefs(store).name;
 const newName = ref("");
 function setName() {
@@ -14,6 +13,7 @@ function setName() {
   newName.value = "";
 }
 
+// taking a picture and displaying it:
 const imageUrl = ref(null);
 async function takePic() {
   const image = await Camera.getPhoto({
