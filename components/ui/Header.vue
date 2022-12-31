@@ -2,7 +2,6 @@
 import { Icon } from "@iconify/vue";
 import { useTheme } from "vuetify";
 import { useStore } from "~/store/store";
-import { storeToRefs } from "pinia";
 
 const router = useRouter();
 const drawer = ref(false);
@@ -35,8 +34,12 @@ function toggleTheme() {
       ><Icon icon="game-icons:hamburger-menu" text-5
     /></v-app-bar-nav-icon>
 
-    <v-toolbar-title>Application</v-toolbar-title>
-    <div flex gap-2 text-5 items-center mr-4>
+    <UiVuetifyBreadcrumbs />
+    <v-divider vertical mx-4></v-divider>
+    <div class="divider divider-horizontal"></div>
+    <UiDaisyBreadcrumbs />
+
+    <div flex gap-2 text-5 items-center mr-4 ml-auto>
       <Icon icon="logos:nuxt-icon" />
       <Icon icon="logos:vuetifyjs" />
       <Icon icon="logos:unocss" />
