@@ -1,4 +1,11 @@
 <script setup>
+import { useStore } from "~/store/store";
+import { storeToRefs } from "pinia";
+
+// useStore() and name handling:
+const store = useStore();
+const name = storeToRefs(store).name;
+const daisyTheme = storeToRefs(store).daisyTheme;
 useHead({
   script: [
     {
@@ -12,7 +19,7 @@ useHead({
 </script>
 
 <template>
-  <v-app>
+  <v-app :data-theme="daisyTheme">
     <NuxtLayout> <NuxtPage /> </NuxtLayout>
   </v-app>
 </template>

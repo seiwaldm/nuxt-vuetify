@@ -7,7 +7,7 @@ import { storeToRefs } from "pinia";
 // useStore() and name handling:
 const store = useStore();
 const name = storeToRefs(store).name;
-const daisyTheme = storeToRefs(store).daisyTheme;
+
 const newName = ref("");
 function setName() {
   store.name = newName.value;
@@ -70,7 +70,7 @@ async function takePic() {
           </v-card-actions>
         </v-card>
       </v-container>
-      <div flex flex-col items-center gap-4 p-4 :data-theme="daisyTheme">
+      <div flex flex-col items-center gap-4 p-4>
         <img src="daisy.ico" alt="" width="48" />
         <div flex gap-2>
           <input
@@ -86,7 +86,19 @@ async function takePic() {
           <button class="btn btn-primary">Primary</button>
           <button class="btn btn-secondary">Secondary</button>
           <button class="btn btn-accent">Accent</button>
-          <button class="btn btn-warning btn-outline">Warning</button>
+          <button class="btn btn-warning btn-outline" b-1>Warning</button>
+          <button class="btn btn-outline btn-error" b-1>Error</button>
+          <button class="btn btn-success btn-outline" b-1>Success</button>
+          <button class="btn btn-info btn-outline" b-1>Info</button>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title">Card title!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
       </div>
     </v-container>
