@@ -33,9 +33,13 @@ async function takePic() {
       ><Icon text-6 icon="material-symbols:photo-camera-rounded"
     /></v-btn>
     <img :src="imageUrl" max-w="100%" />
-    <v-container grid grid-cols-2 gap-4>
+    <v-container grid md:grid-cols-2 gap-4>
       <v-container flex flex-col items-center gap-4>
         <Icon icon="logos:vuetifyjs" text-9 />
+        <a href="https://next.vuetifyjs.com/en/components/all/"
+          >Vuetify Components</a
+        >
+
         <div flex gap-2 w="400px" max-w="100%" items-center>
           <v-text-field
             label="Tell me your name"
@@ -72,6 +76,9 @@ async function takePic() {
       </v-container>
       <div flex flex-col items-center gap-4 p-4>
         <img src="daisy.ico" alt="" width="48" />
+        <a href="https://daisyui.com/components/" class="link"
+          >daisyUI Components</a
+        >
         <div flex gap-2>
           <input
             type="text"
