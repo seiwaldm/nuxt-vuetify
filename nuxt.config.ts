@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@kevinmarrec/nuxt-pwa",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
+    "@nuxtjs/tailwindcss",
   ],
   app: { pageTransition: { name: "page", mode: "out-in" } },
   css: ["vuetify/lib/styles/main.sass"],
@@ -28,12 +29,15 @@ export default defineNuxtConfig({
       ["text-red", { color: "#E4003A" }],
       ["text-orange", { color: "#F7A823" }],
       ["text-blue", { color: "#005577" }],
+      ["bg-red", { "background-color": "#E4003A" }],
+      ["bg-orange", { "background-color": "#F7A823" }],
+      ["bg-blue", { "background-color": "#005577" }],
     ],
   },
   pwa: {
-    workbox: {
-      enabled: true,
-    },
+    // workbox: {
+    //   enabled: true,
+    // },
     icon: {
       sizes: [64, 120, 144, 152, 192, 384, 512],
     },

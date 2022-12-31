@@ -27,43 +27,68 @@ async function takePic() {
 
 <template>
   <v-container flex flex-col items-center gap-4>
-    <h1 b-1 text-red p-4>Hello {{ name }}</h1>
-    <div flex gap-2 w="400px" max-w="100%" items-center>
-      <v-text-field
-        label="Tell me your name"
-        v-model="newName"
-        @keyup.enter="setName"
-      ></v-text-field>
-      <v-btn @click="setName">Set Name</v-btn>
-    </div>
-    <div flex flex-wrap justify-center gap-4>
-      <v-btn> Button </v-btn>
-      <v-btn color="primary">Primary</v-btn>
-      <v-btn color="secondary">Secondary</v-btn>
-      <v-btn color="accent">Accent</v-btn>
-      <v-btn color="warning" variant="outlined">Warning</v-btn>
-      <v-btn color="error" variant="outlined">Error</v-btn>
-      <v-btn color="success" variant="outlined">Success</v-btn>
-      <v-btn color="info" variant="outlined">Info</v-btn>
-    </div>
+    <h1 text-center>Hello {{ name }}</h1>
     <v-btn @click="takePic"
       ><Icon text-6 icon="material-symbols:photo-camera-rounded"
     /></v-btn>
     <img :src="imageUrl" max-w="100%" />
-    <v-card>
-      <v-card-title>v-card-title</v-card-title>
-      <v-card-subtitle>v-card-subtitle</v-card-subtitle>
-      <v-card-text>
-        <span>&lt;v-card-text </span>
-        <span text-red>text-red </span>
-        <span text-blue>text-blue </span>
-        <span text-orange>text-orange</span>&gt;
-      </v-card-text>
-      <v-card-actions>
-        <v-btn color="primary">Primary-Button</v-btn>
-        <v-btn color="secondary">Secondary-Button</v-btn>
-      </v-card-actions>
-    </v-card>
+    <v-container grid grid-cols-2 gap-4>
+      <v-container flex flex-col items-center gap-4>
+        <Icon icon="logos:vuetifyjs" text-9 />
+        <div flex gap-2 w="400px" max-w="100%" items-center>
+          <v-text-field
+            label="Tell me your name"
+            v-model="newName"
+            @keyup.enter="setName"
+          ></v-text-field>
+          <v-btn @click="setName">Set Name</v-btn>
+        </div>
+        <div flex flex-wrap justify-center gap-4>
+          <v-btn> Button </v-btn>
+          <v-btn color="primary">Primary</v-btn>
+          <v-btn color="secondary">Secondary</v-btn>
+          <v-btn color="accent">Accent</v-btn>
+          <v-btn color="warning" variant="outlined">Warning</v-btn>
+          <v-btn color="error" variant="outlined">Error</v-btn>
+          <v-btn color="success" variant="outlined">Success</v-btn>
+          <v-btn color="info" variant="outlined">Info</v-btn>
+        </div>
+
+        <v-card>
+          <v-card-title>v-card-title</v-card-title>
+          <v-card-subtitle>v-card-subtitle</v-card-subtitle>
+          <v-card-text>
+            <span>&lt;v-card-text </span>
+            <span text-red>text-red </span>
+            <span text-blue>text-blue </span>
+            <span text-orange>text-orange</span>&gt;
+          </v-card-text>
+          <v-card-actions>
+            <v-btn color="primary">Primary-Button</v-btn>
+            <v-btn color="secondary">Secondary-Button</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-container>
+      <div flex flex-col items-center gap-4 p-4>
+        <img src="daisy.ico" alt="" width="40" />
+        <div flex gap-2>
+          <input
+            type="text"
+            placeholder="Tell me your name"
+            v-model="newName"
+            class="input w-full max-w-xs"
+          />
+          <button class="btn" @click="setName">Set Name</button>
+        </div>
+        <div flex flex-wrap justify-center gap-4>
+          <button class="btn">Button</button>
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-accent">Accent</button>
+          <button class="btn btn-warning outline">Warning</button>
+        </div>
+      </div>
+    </v-container>
   </v-container>
 </template>
 
