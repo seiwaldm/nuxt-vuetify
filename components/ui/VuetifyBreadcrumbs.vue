@@ -5,7 +5,7 @@ const route = useRoute();
 
 const items = computed(() => {
   if (route.path) {
-    return ["home", ...route.path.split("/").slice(1)];
+    return [...route.path.split("/").slice(1)];
   }
   return [];
 });

@@ -24,11 +24,15 @@ async function takePic() {
   });
   imageUrl.value = image.webPath;
 }
+
+definePageMeta({
+  alias: "/home",
+});
 </script>
 
 <template>
   <v-container flex flex-col items-center gap-4>
-    <h1 text-center>Hello {{ name }}</h1>
+    <h1 text-center>Hello {{ name || "Friend" }}</h1>
     <v-btn @click="takePic"
       ><Icon text-6 icon="material-symbols:photo-camera-rounded"
     /></v-btn>
@@ -36,7 +40,7 @@ async function takePic() {
     <v-container grid md:grid-cols-2 gap-4>
       <v-container flex flex-col items-center gap-4>
         <Icon icon="logos:vuetifyjs" text-9 />
-        <a href="https://next.vuetifyjs.com/en/components/all/"
+        <a href="https://next.vuetifyjs.com/en/components/all/" class="link"
           >Vuetify Components</a
         >
 
@@ -75,7 +79,7 @@ async function takePic() {
         </v-card>
       </v-container>
       <div flex flex-col items-center gap-4 p-4>
-        <img src="daisy.ico" alt="" width="48" />
+        <img src="daisy.ico" alt="" width="45" />
         <a href="https://daisyui.com/components/" class="link"
           >daisyUI Components</a
         >
@@ -84,7 +88,7 @@ async function takePic() {
             type="text"
             placeholder="Tell me your name"
             v-model="newName"
-            class="input w-full max-w-xs"
+            class="input w-full max-w-xs bg-base-200"
           />
           <button class="btn" @click="setName">Set Name</button>
         </div>
