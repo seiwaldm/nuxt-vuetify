@@ -1,14 +1,22 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 import { useTheme } from "vuetify";
+import { useStore } from "~/store/store";
+import { storeToRefs } from "pinia";
+
 const router = useRouter();
 const drawer = ref(false);
 const theme = useTheme();
+const store = useStore();
 
 function toggleTheme() {
-  theme.global.name.value = theme.global.current.value.dark
-    ? "myCustomLightTheme"
-    : "myCustomDarkTheme";
+  if (theme.global.current.value.dark) {
+    theme.global.name.value = "myCustomLightTheme";
+    store.daisyTheme = "light";
+  } else {
+    theme.global.name.value = "myCustomDarkTheme";
+    store.daisyTheme = "dark";
+  }
 }
 </script>
 

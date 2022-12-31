@@ -7,6 +7,7 @@ import { storeToRefs } from "pinia";
 // useStore() and name handling:
 const store = useStore();
 const name = storeToRefs(store).name;
+const daisyTheme = storeToRefs(store).daisyTheme;
 const newName = ref("");
 function setName() {
   store.name = newName.value;
@@ -69,8 +70,8 @@ async function takePic() {
           </v-card-actions>
         </v-card>
       </v-container>
-      <div flex flex-col items-center gap-4 p-4>
-        <img src="daisy.ico" alt="" width="40" />
+      <div flex flex-col items-center gap-4 p-4 :data-theme="daisyTheme">
+        <img src="daisy.ico" alt="" width="48" />
         <div flex gap-2>
           <input
             type="text"
@@ -85,7 +86,7 @@ async function takePic() {
           <button class="btn btn-primary">Primary</button>
           <button class="btn btn-secondary">Secondary</button>
           <button class="btn btn-accent">Accent</button>
-          <button class="btn btn-warning outline">Warning</button>
+          <button class="btn btn-warning btn-outline">Warning</button>
         </div>
       </div>
     </v-container>

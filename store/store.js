@@ -5,7 +5,8 @@ export const useStore = defineStore(
     'store',
     () => {
         const name = ref('')
-        return { name }
+        const daisyTheme = ref('dark')
+        return { name, daisyTheme }
     },
     {
         persist: true
