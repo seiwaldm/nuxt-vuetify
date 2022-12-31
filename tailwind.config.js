@@ -24,7 +24,7 @@ module.exports = {
                     "error": "#E4003A",
                     "base-100": "#212121",
                     "neutral": "#212121",
-                    "neutral-content": 'e2e2e2',
+                    "neutral-content": "#E2E2E2",
                 },
             },
         ],
