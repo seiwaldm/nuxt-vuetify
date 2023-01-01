@@ -34,11 +34,6 @@ function toggleTheme() {
       ><Icon icon="game-icons:hamburger-menu" text-5
     /></v-app-bar-nav-icon>
 
-    <UiVuetifyBreadcrumbs />
-    <v-divider vertical mx-4></v-divider>
-    <div class="divider divider-horizontal"></div>
-    <UiDaisyBreadcrumbs />
-
     <div flex gap-2 text-5 items-center mr-4 ml-auto>
       <Icon icon="logos:nuxt-icon" />
       <Icon icon="logos:vuetifyjs" />

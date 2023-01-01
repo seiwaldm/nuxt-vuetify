@@ -1,5 +1,6 @@
 <template>
   <v-container>
-    <h1>Hello Dummy!</h1>
+    <UiVuetifyBreadcrumbs />
+    <UiDaisyBreadcrumbs />
   </v-container>
 </template>
