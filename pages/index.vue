@@ -124,7 +124,7 @@ definePageMeta({
       <p>
         Tailwind ist wunderbar, um z.B. mit <code>flex</code> oder
         <code>grid</code> Layouts zu gestalten. Bibliotheken mit fertigen
-        UI-Elementen können unsere Leben als Webdesigner aber wesentlich
+        UI-Elementen können unser Leben als Webdesigner aber wesentlich
         vereinfachen. Dieses Template integriert zwei unterschiedliche
         UI-Komponenten-Bibliotheken: <em>daisyUI</em> und <em>Vuetify</em>.
         daisyUI besteht nur aus CSS-Klassen, die auf Tailwind aufbauen und damit
