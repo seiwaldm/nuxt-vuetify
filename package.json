@@ -30,6 +30,7 @@
     "@capacitor/keyboard": "4.1.0",
     "@capacitor/preferences": "4.0.2",
     "@capacitor/status-bar": "4.1.1",
+    "@ionic/pwa-elements": "^3.1.1",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@pinia/nuxt": "^0.4.6",
     "@tailwindcss/typography": "^0.5.9",

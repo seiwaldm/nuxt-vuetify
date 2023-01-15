@@ -11,6 +11,7 @@ specifiers:
   '@capacitor/preferences': 4.0.2
   '@capacitor/status-bar': 4.1.1
   '@iconify/vue': ^4.0.2
+  '@ionic/pwa-elements': ^3.1.1
   '@kevinmarrec/nuxt-pwa': ^0.13.0
   '@nuxtjs/tailwindcss': ^6.2.0
   '@pinia-plugin-persistedstate/nuxt': ^1.0.0
@@ -39,6 +40,7 @@ dependencies:
   '@capacitor/keyboard': 4.1.0_@capacitor+core@4.6.1
   '@capacitor/preferences': 4.0.2_@capacitor+core@4.6.1
   '@capacitor/status-bar': 4.1.1_@capacitor+core@4.6.1
+  '@ionic/pwa-elements': 3.1.1
   '@nuxtjs/tailwindcss': 6.2.0_webpack@5.75.0
   '@pinia/nuxt': 0.4.6_vue@3.2.45
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -684,6 +686,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@ionic/pwa-elements/3.1.1:
+    resolution: {integrity: sha512-BoEX1pSrKn5dP4VQwaf8DweAmT4ynmpW+9f6oj/W1xLe54bmuXcUY07ziuZX1DLu50xHSYcO5qJ/dbYC/w6wgA==}
+    dev: false
 
   /@ionic/utils-array/2.1.5:
     resolution: {integrity: sha512-HD72a71IQVBmQckDwmA8RxNVMTbxnaLbgFOl+dO5tbvW9CkkSFCv41h6fUuNsSEVgngfkn0i98HDuZC8mk+lTA==}
