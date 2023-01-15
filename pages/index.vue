@@ -31,8 +31,74 @@ definePageMeta({
 </script>
 
 <template>
-  <v-container flex flex-col items-center gap-4>
-    <h1 text-center>Hello {{ name || "Friend" }}</h1>
+  <v-container flex flex-col items-center gap-4 prose>
+    <div class="prose text-justify hyphens-auto">
+      <h1 text-center>Hello {{ name || "Friend" }}!</h1>
+      <p>
+        Dieses Template soll dir helfen, einen schnellen Start ins
+        Frontend/UI-Development hinzulegen. Das Herzstück der Vorlage bildet das
+        Meta-Framework
+        <a
+          href="https://nuxt.com/docs/guide/concepts/auto-imports"
+          target="_blank"
+          >Nuxt</a
+        >. Wir nennen Nuxt ein Meta-Framework da es auf
+        <a href="https://vuejs.org/tutorial/#step-1" target="_blank">Vue</a>
+        aufbaut. Es gibt drei unterschiedliche Arten von Vue-Komponenten in
+        Nuxt:
+      </p>
+      <ol>
+        <li>
+          <h2>Layouts</h2>
+          <p>
+            Hier finden wir html-Elemente/Komponenten, die auf (fast) allen
+            Seiten unserer Web-Applikation sichtbar sein sollen (z.B.
+            Navigation, Header und Footer). Bei Bedarf können für einzelne
+            Seiten gesonderte Layouts erstellt werden. Der Inhalt von Pages wird
+            an der Stelle im Layout eingefügt, an der wir den
+            <code>&lt;slot&gt;</code> tag einfügen.
+          </p>
+        </li>
+        <li>
+          <h2>Pages</h2>
+          <p>
+            Pages sind das Herzstück unserer Navigation. Nuxt erstellt für jeden
+            Vue-Komponenten im Ordner <code>pages</code> eine eigene Route. Mit
+            Hilfe von NuxtLinks kann einfach zwischen den Seiten navigiert
+            werden. Beispielsweise führt uns
+            <code class="language-html">&lt;NuxtLink to="/about"&gt;</code> bei
+            einem Klick auf die About-Seite. Alternativ kann die navigation auch
+            mit Javascript mit der <code>push()</code> Funktion des
+            <code>router</code> Objekts erfolgen. Ein Beispiel dafür findet sich
+            im Header-Komponenten.
+          </p>
+        </li>
+        <li>
+          <h2>Components</h2>
+          <p>
+            Im <code>components</code> Ordner schließlich finden wir die
+            "normalen" Vue-Komponenten, d.h. Elemente unseres UIs, die wir immer
+            wieder (z.B. auf unterschiedlichen Pages) verwenden können. Achtung:
+            Die Ordnerstruktur spielt bei der Einbindung der Komponenten eine
+            Rolle! Z.B. verwenden wir den Header-Komponenten aus dem Unterordner
+            UI mit dem tag <code>&lt;UiHeader&gt;</code> oder
+            <code>&lt;ui-header&gt;</code>.
+          </p>
+        </li>
+      </ol>
+      <h2>State Management</h2>
+      <p>
+        Im Ordner <code>store</code> des Projekts findest du eine js-Datei mit
+        einem Pinia-Store. Durch ein installiertes Plugin werden alle
+        Variablen/Konstanten aus dem Store mit dem localStorage des Browser
+        synchronisiert. Das heißt, die im Store hinterlegten Daten bleiben auch
+        nach einem Reload der Seite erhalten und überstehen in den meisten
+        Fällen - abhängig von den Einstellungen der Benutzer*innen - sogar einen
+        Browser-Neustart. Etwas weiter unten findest du ein Textfeld zur Eingabe
+        deines Namens. Sobal du deinen Namen eingegeben hast, kanns du die Seite
+        auch neu laden und wirst oben anstatt "Friend" deinen Namen sehen.
+      </p>
+    </div>
     <v-btn @click="takePic"
       ><Icon text-6 icon="material-symbols:photo-camera-rounded"
     /></v-btn>
