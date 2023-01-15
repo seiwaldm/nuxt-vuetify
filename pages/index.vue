@@ -98,31 +98,8 @@ definePageMeta({
         deines Namens. Sobal du deinen Namen eingegeben hast, kanns du die Seite
         auch neu laden und wirst oben anstatt "Friend" deinen Namen sehen.
       </p>
-      <h2>App-Funktionen</h2>
-      <p>
-        Durch ein Plugin wird diese Website zur
-        <em>Progressive Web App</em> (PWA). Das heißt, sie ist über den Chrome
-        Browser "installierbar" und verfügt zumindest über eingeschränkte
-        Offline-Funktionalität. Diverse App-Logos und das Favicon der Seite
-        werden aus der Datei <code>/public/icon.png</code> automatisch
-        generiert. Der Titel der Website und der Name bei der Installation
-        stammt aus der <code>package.json</code>.
-      </p>
-
-      <p>
-        Zusätzlich ist <em>Capacitor</em> installiert. Dabei handelt es sich um
-        eine Programmbibliothek, die deine Web-Applikation in eine native
-        Android oder iOS App "verpackt" und den Zugriff auf diverse
-        Geräte-Funktionen, wie die Kamera, das Dateisystem oder Push-Nachrichten
-        erlaubt. Der Kamera-Button demonstriert den Einsatz der Kamera-Funktion:
-      </p>
-      <v-btn @click="takePic"
-        ><Icon text-6 icon="material-symbols:photo-camera-rounded"
-      /></v-btn>
-      <img :src="imageUrl" max-w="100%" />
       <h2>Styling</h2>
     </div>
-
     <v-container grid md:grid-cols-2 gap-4>
       <v-container flex flex-col items-center gap-4>
         <Icon icon="logos:vuetifyjs" text-9 />
@@ -198,6 +175,30 @@ definePageMeta({
         </div>
       </div>
     </v-container>
+    <div class="prose text-justify hyphens-auto" flex flex-col items-center>
+      <h2>App-Funktionen</h2>
+      <p>
+        Durch ein Plugin wird diese Website zur
+        <em>Progressive Web App</em> (PWA). Das heißt, sie ist über den Chrome
+        Browser "installierbar" und verfügt zumindest über eingeschränkte
+        Offline-Funktionalität. Diverse App-Logos und das Favicon der Seite
+        werden aus der Datei <code>/public/icon.png</code> automatisch
+        generiert. Der Titel der Website und der Name bei der Installation
+        stammt aus der <code>package.json</code>.
+      </p>
+
+      <p>
+        Zusätzlich ist <em>Capacitor</em> installiert. Dabei handelt es sich um
+        eine Programmbibliothek, die deine Web-Applikation in eine native
+        Android oder iOS App "verpackt" und den Zugriff auf diverse
+        Geräte-Funktionen, wie die Kamera, das Dateisystem oder Push-Nachrichten
+        erlaubt. Der Kamera-Button demonstriert den Einsatz der Kamera-Funktion:
+      </p>
+      <v-btn @click="takePic"
+        ><Icon text-6 icon="material-symbols:photo-camera-rounded"
+      /></v-btn>
+      <img :src="imageUrl" max-w="100%" />
+    </div>
   </v-container>
 </template>
 
