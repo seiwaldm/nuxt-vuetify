@@ -99,13 +99,81 @@ definePageMeta({
         auch neu laden und wirst oben anstatt "Friend" deinen Namen sehen.
       </p>
       <h2>Styling</h2>
+      <p>
+        Für grundlegendes Styling verwenden wir das CSS-Framework
+        <em>Tailwind</em>. Einen guten Überblick über die vielen Utility-Klassen
+        von Tailwind bietet nach Start des DevServers die Übersicht unter
+        <a href="http://localhost:3000/_tailwind/" target="_blank"
+          >http://localhost:3000/_tailwind/</a
+        >. Durch die zusätzliche Integration des Frameworks
+        <a href="https://uno.antfu.me/" target="_blank">UnoCSS</a> können wir
+        außerdem (fast) alle Tailwind-Klassen im "Attriubtify-Mode" verwenden.
+        Das heißt, wir können z.B. anstatt
+        <code class="language-html">&lt;div class="flex"&gt;</code> einfach nur
+        <code class="language-html">&lt;div flex&gt;</code> schreiben. Bei den
+        vielen Klassen, die wir mit Tailwind setzen müssen, resultiert das
+        schnell in verbesserter Übersichtlichkeit.
+      </p>
+      <p>
+        Icons lassen sich komfortabel mit
+        <a href="https://icon-sets.iconify.design/" target="_blank">Iconify</a>
+        einbinden: einfaches Copy-Paste genügt:
+        <code>&lt;Icon icon="fa6-solid:thumbs-up" /&gt;</code> resultiert z.B.
+        in: <Icon icon="fa6-solid:thumbs-up" text-6 />
+      </p>
+      <p>
+        Tailwind ist wunderbar, um z.B. mit <code>flex</code> oder
+        <code>grid</code> Layouts zu gestalten. Bibliotheken mit fertigen
+        UI-Elementen können unsere Leben als Webdesigner aber wesentlich
+        vereinfachen. Dieses Template integriert zwei unterschiedliche
+        UI-Komponenten-Bibliotheken: <em>daisyUI</em> und <em>Vuetify</em>.
+        daisyUI besteht nur aus CSS-Klassen, die auf Tailwind aufbauen und damit
+        100%ig anpassbar sind. Vuetify hingegen ist eine speziell für Vue
+        geschriebene Komponenten-Bibliothek. Sie enthält damit auch Javascript
+        und ist in der Anwendung etwas komplexer. Im Folgenden finden sich
+        Beispiele für den Einsatz beider Bibliotheken.
+      </p>
     </div>
-    <v-container grid md:grid-cols-2 gap-4>
+    <v-container grid md:grid-cols-2 gap-4 class="prose">
       <v-container flex flex-col items-center gap-4>
-        <Icon icon="logos:vuetifyjs" text-9 />
-        <a href="https://next.vuetifyjs.com/en/components/all/" class="link"
-          >Vuetify Components</a
-        >
+        <h3>
+          <a href="https://daisyui.com/components/" class="link">daisyUI</a>
+        </h3>
+        <div flex gap-2>
+          <input
+            type="text"
+            placeholder="Tell me your name"
+            v-model="newName"
+            class="input w-full max-w-xs bg-base-200"
+          />
+          <button class="btn" @click="setName">Set Name</button>
+        </div>
+        <div flex flex-wrap justify-center gap-4>
+          <button class="btn">Button</button>
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-accent">Accent</button>
+          <button class="btn btn-warning btn-outline" b-1>Warning</button>
+          <button class="btn btn-outline btn-error" b-1>Error</button>
+          <button class="btn btn-success btn-outline" b-1>Success</button>
+          <button class="btn btn-info btn-outline" b-1>Info</button>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="card-title">Card title!</div>
+            <div>If a dog chews shoes whose shoes does he choose?</div>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </v-container>
+      <v-container flex flex-col items-center gap-4>
+        <h3>
+          <a href="https://next.vuetifyjs.com/en/components/all/" class="link"
+            >Vuetify</a
+          >
+        </h3>
 
         <div flex gap-2 w="400px" max-w="100%" items-center>
           <v-text-field
@@ -141,39 +209,6 @@ definePageMeta({
           </v-card-actions>
         </v-card>
       </v-container>
-      <div flex flex-col items-center gap-4 p-4>
-        <a href="https://daisyui.com/components/" class="link"
-          >daisyUI Components</a
-        >
-        <div flex gap-2>
-          <input
-            type="text"
-            placeholder="Tell me your name"
-            v-model="newName"
-            class="input w-full max-w-xs bg-base-200"
-          />
-          <button class="btn" @click="setName">Set Name</button>
-        </div>
-        <div flex flex-wrap justify-center gap-4>
-          <button class="btn">Button</button>
-          <button class="btn btn-primary">Primary</button>
-          <button class="btn btn-secondary">Secondary</button>
-          <button class="btn btn-accent">Accent</button>
-          <button class="btn btn-warning btn-outline" b-1>Warning</button>
-          <button class="btn btn-outline btn-error" b-1>Error</button>
-          <button class="btn btn-success btn-outline" b-1>Success</button>
-          <button class="btn btn-info btn-outline" b-1>Info</button>
-        </div>
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card title!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </v-container>
     <div class="prose text-justify hyphens-auto" flex flex-col items-center>
       <h2>App-Funktionen</h2>
