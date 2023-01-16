@@ -228,7 +228,7 @@ definePageMeta({
       <p>
         Mit Hilfe des Plugins
         <a href="https://vueuse.org/guide/" target="_blank">VueUse</a> lassen
-        sich viele nützliche Funktionen relativ einfach nützen. Zum Beispiel
+        sich viele nützliche Funktionen relativ einfach nutzen. Zum Beispiel
         kann damit der Standort einer Person abgerufen werden:
       </p>
 
