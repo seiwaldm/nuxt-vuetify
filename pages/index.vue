@@ -14,6 +14,9 @@ function setName() {
   newName.value = "";
 }
 
+//geolocation via VueUse:
+const { coords, locatedAt, error, resume, pause } = useGeolocation();
+
 // taking a picture and displaying it:
 const imageUrl = ref(null);
 async function takePic() {
@@ -221,6 +224,18 @@ definePageMeta({
         generiert. Der Titel der Website und der Name bei der Installation
         stammt aus der <code>package.json</code>.
       </p>
+
+      <p>
+        Mit Hilfe des Plugins
+        <a href="https://vueuse.org/guide/" target="_blank">VueUse</a> lassen
+        sich viele nützliche Funktionen relativ einfach nützen. Zum Beispiel
+        kann damit der Standort einer Person abgerufen werden:
+      </p>
+
+      <ul>
+        <li>Breitengrad: {{ coords.latitude }}</li>
+        <li>Längengrad: {{ coords.longitude }}</li>
+      </ul>
 
       <p>
         Zusätzlich ist <em>Capacitor</em> installiert. Dabei handelt es sich um

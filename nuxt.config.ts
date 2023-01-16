@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
   ],
   app: { pageTransition: { name: "page", mode: "out-in" } },
   css: ["vuetify/lib/styles/main.sass"],

@@ -34,6 +34,7 @@
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@pinia/nuxt": "^0.4.6",
     "@tailwindcss/typography": "^0.5.9",
+    "@vueuse/nuxt": "^9.10.0",
     "autoprefixer": "^10.0.2",
     "daisyui": "^2.46.0",
     "pinia": "^2.0.28",
