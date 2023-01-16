@@ -148,6 +148,7 @@ definePageMeta({
             placeholder="Tell me your name"
             v-model="newName"
             class="input w-full max-w-xs bg-base-200"
+            @keyup.enter="setName"
           />
           <button class="btn" @click="setName">Set Name</button>
         </div>
